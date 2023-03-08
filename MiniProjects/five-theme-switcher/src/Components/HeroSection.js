@@ -6,6 +6,7 @@ import Header from "./Header";
 const HeroSection = () => {
 	const theme = useContext(ThemeContext)[0];
 	const currentTheme = AppTheme[theme];
+	const [themeMode, setThemeMode] = useContext(ThemeContext);
 
 	return (
 		<div
@@ -27,9 +28,13 @@ const HeroSection = () => {
 					fontSize: "20px",
 					color: "#ffffff",
 					border: `${currentTheme.border}`,
+					cursor: "pointer",
+				}}
+				onClick={() => {
+					setThemeMode(themeMode === "light" ? "dark" : "light");
 				}}
 			>
-				Click Me
+				{currentTheme.backgroundColor === "#ffffff" ? "Switch to Dark Mode" : "Switch to Light Mode"}
 			</button>
 		</div>
 	);
