@@ -2,7 +2,7 @@ import React from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import { FaCheckDouble } from "react-icons/fa";
 
-const Todo = ({ todos, markComplete }) => {
+const Todos = ({ todos, markComplete }) => {
 	return (
 		<ListGroup className="mt-5 mb-2 items">
 			{todos.map((todo) => (
@@ -17,4 +17,4 @@ const Todo = ({ todos, markComplete }) => {
 	);
 };
 
-export default Todo;
+export default Todos;
